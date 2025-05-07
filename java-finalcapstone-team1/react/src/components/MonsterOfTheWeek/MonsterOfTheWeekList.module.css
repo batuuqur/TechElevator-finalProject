@@ -1,0 +1,148 @@
+.tier-group {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem; /* Smaller font size */
+  text-align: center;
+  color: #f5e6c8;
+  text-shadow: 0 0 5px #e0b500, 0 0 10px #e0b500, 2px 2px 0 #000;
+  margin-bottom: 1rem;
+  letter-spacing: 1px; /* Tighter letter-spacing */
+  background: linear-gradient(to right, #3b2f2f, #1c1c1c);
+  padding: 0.5rem 1rem; /* Reduced padding */
+  border: 2px solid #e0b500;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(224, 181, 0, 0.3);
+  max-width: 80%; /* Constrained width */
+  margin: 0 auto; /* Center align */
+}
+.monsterOfTheWeek {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem; /* Top padding increased */
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(224, 181, 0, 0.2);
+  color: #f5e6c8;
+  height: 100%;
+}
+
+.tier-group-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #FFD700; /* Brighter gold for emphasis */
+  font-family: 'Uncial Antiqua', cursive;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  border-bottom: 2px solid #8B5A2B;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.tier-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  height: 600px;
+}
+
+.monster-tier {
+  flex: 1;
+  /*background-color: #5a4e4e;*/
+  background: linear-gradient(180deg,#2f2f2f 50%, rgba(0,255,0,0) 100%);
+  padding: 10px;
+  border-radius: 8px;
+  /*border: 3px solid #e0b500; !* Epic gold border *!*/
+  border-right: 3px solid #e0b500;
+  border-left: 3px solid #e0b500;
+  border-top: 3px solid #e0b500;
+  /*box-shadow: 0 0 10px rgba(224, 181, 0, 0.7); !* Gold glow effect *!*/
+}
+
+.monster-tier h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #ffd700;
+  font-family: 'Uncial Antiqua', cursive;
+  padding-bottom: 4px;
+}
+
+.monster-card {
+  display: flex;
+  flex-direction: column; /* or row if you want horizontal layout */
+  justify-content: center;  /* centers items vertically if row, horizontally if column */
+  align-items: center;      /* centers items horizontally if row, vertically if column */
+  
+  background-color: ##6b4f2b;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+
+.button-container {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.tier-button {
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #5a4e4e;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+.tier-button:hover {
+  background-color: #deb887;
+}
+
+.tier-group {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.tier-group.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tier-group.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill the parent container */
+  width: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.monsterOfTheWeek {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scrollable-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* remove any scrollbars */
+}

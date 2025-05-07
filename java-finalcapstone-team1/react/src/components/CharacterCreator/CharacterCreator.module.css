@@ -1,0 +1,195 @@
+.creatorContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+
+.leftContainer{
+  display: grid;
+  grid-template-areas:
+  "name name name"
+  "Class Class Class"
+  "DiceRoll DiceRoll DiceRoll";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  justify-items: center;
+  align-content: center;
+  height: 90vh;
+  width: 50%;
+  min-width: 925px;
+}
+
+.nameInput {
+  grid-area: name;
+  align-items: center;
+  align-content: center;
+  transform:
+          /* translateY(65px) */
+          scale(2);
+}
+
+/* .diceWrapper{
+  transform: translateY(-40px);
+} */
+
+.classSelection {
+  grid-area: Class;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.classSelection h3{
+  align-content: center;
+  height: 20px;
+  column-gap: 20px;
+  transform: scale(2);
+  margin-bottom: 20px;
+}
+
+.classCards {
+  width: 100%;
+  justify-items: center;
+  grid-area: Class;
+  display: grid;
+  grid-template-areas: "A B R";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 36px;
+}
+
+.Archer{
+  grid-area: A;
+}
+
+.Barbarain{
+  grid-area: B;
+}
+
+.Rogue{
+  grid-area: R;
+}
+
+.statRoll h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.statRoll {
+  grid-area: DiceRoll;
+  justify-items: center;
+  justify-content: center;
+}
+
+.verticalDivider {
+  width: 2px;
+  background-color: #aaa;
+  margin: 0 1rem;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.shopSectionContainer{
+  height: 90%;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* -------- Submit Button -------- */
+.submitSection {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+/* TEXT -------------------------*/
+.shopPrompt {
+  padding: 1rem 2rem;
+  margin-left: 50px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  background: radial-gradient(circle at center, #444, #222);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2),
+              0 0 40px rgba(255, 215, 0, 0.2),
+              0 0 60px rgba(255, 215, 0, 0.1);
+  border-radius: 12px;
+  max-width: 500px;
+  max-height: 75px;
+  opacity: 0.9;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 0 5px #ffffff, 0 0 15px #ffd700;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  line-height: 1.8;
+  /*margin-top: 300px;*/
+  white-space: pre-line;
+  cursor:pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  /*border-right: 2px solid #0ff;*/
+  width: fit-content;
+  animation: typing 2s steps(40, end), blinkCaret 0.75s step-end infinite
+}
+
+
+.shopPrompt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4),
+              0 0 60px rgba(255, 215, 0, 0.4),
+              0 0 90px rgba(255, 215, 0, 0.2);
+}
+
+
+.shopPrompt.spin {
+  animation: spinBox 0.6s ease-in-out;
+}
+
+@keyframes spinBox {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shopPrompt::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}

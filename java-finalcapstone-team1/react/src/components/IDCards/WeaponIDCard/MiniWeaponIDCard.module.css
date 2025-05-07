@@ -1,0 +1,53 @@
+.cardContainer {
+    display: flex;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, rgba(36, 23, 15, 0.9), rgba(20, 12, 8, 0.95));
+    border: 2px solid #a08062;
+    border-radius: 12px;
+    padding: 0.5rem;
+    max-width: 600px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(255, 222, 173, 0.2);
+    color: #f5e6c8;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Center all text content inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyCardContainer{
+    display: flex;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, grey, darkgrey);
+    border: 2px solid #a08062;
+    border-radius: 12px;
+    padding: 0.5rem;
+    max-width: 600px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(255, 222, 173, 0.2);
+    color: #f5e6c8;
+    cursor: default;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: #f5deb3;
+    border-bottom: 1px solid rgba(222, 184, 135, 0.3);
+    padding-bottom: 0.2rem;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-family: 'Uncial Antiqua', 'Cinzel', serif;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.05em;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+.charactersContainer
+{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    /*min-width: 500px;*/
+}
+
+.LeftRightButton{
+    font-size: 225%;
+    text-align: center;
+    vertical-align: center;
+    border-style: none;
+    transform: translateY(-4px);
+  }
+
+.createButton {
+    /* Match the modal's background gradient */
+    background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98));
+    
+    /* Dark elegant border like the modal */
+    border: 2px solid #5d4a38;
+    border-radius: 8px;
+
+    /* Text styling to match the modal */
+    color: #f5e6c8;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    
+    /* Padding for a substantial feel */
+    padding: 0.8rem 1.6rem;
+    
+    /* Cursor and transition effects */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Glowing box shadow similar to modal */
+    box-shadow:
+      0 0 8px rgba(255, 215, 0, 0.2),
+      0 0 16px rgba(255, 215, 0, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 3px rgba(255, 222, 173, 0.15);
+      
+    /* Text shadow for effect */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    
+    /* Position */
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  
+  /* Hover effect matching modal's hover */
+  .createButton:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 12px rgba(255, 215, 0, 0.4),
+      0 0 24px rgba(255, 215, 0, 0.2),
+      0 6px 16px rgba(0, 0, 0, 0.7),
+      inset 0 1px 5px rgba(255, 222, 173, 0.25);
+  }
+  
+  /* Active state */
+  .createButton:active {
+    transform: scale(0.98);
+  }
+  
+  /* Modifier for delete button to make it more ominous */
+  .deleteButton {
+    background: linear-gradient(135deg, rgba(60, 20, 20, 0.95), rgba(40, 10, 10, 0.98));
+    box-shadow:
+      0 0 8px rgba(255, 80, 80, 0.2),
+      0 0 16px rgba(255, 80, 80, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 3px rgba(255, 170, 170, 0.15);
+  }
+  
+  .deleteButton:hover {
+    box-shadow:
+      0 0 12px rgba(255, 80, 80, 0.4),
+      0 0 24px rgba(255, 80, 80, 0.2),
+      0 6px 16px rgba(0, 0, 0, 0.7),
+      inset 0 1px 5px rgba(255, 170, 170, 0.25);
+  }
+
+.tabContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.CharacterSwitcherContainer{
+    display: flex;
+}
+
+.TopNav{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

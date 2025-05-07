@@ -1,0 +1,95 @@
+
+.info-icon-roster {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: #f5deb3;
+  border-radius: 50%;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: background 0.2s ease;
+  z-index: 1;
+}
+
+.info-icon-roster:hover {
+  background: #deb887;
+}
+
+.tooltip-box {
+  position: absolute;
+  z-index: 999;
+}
+
+.tooltip-content {
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+  position: relative;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.tooltip-close {
+  position: absolute;
+  bottom: 9px;
+  right: 6px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.character-selection {
+  position: relative;
+}
+
+.character-selection-heading {
+  position: relative;
+}
+
+
+
+.character-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  
+  .character-slot {
+    width: 100px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .character-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .image-placeholder {
+    font-size: 2rem;
+  }
+  
+  .character-name {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .empty-slot {
+    font-size: 2rem;
+    line-height: 100px;
+  }
+  

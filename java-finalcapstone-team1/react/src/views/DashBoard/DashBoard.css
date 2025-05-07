@@ -1,0 +1,403 @@
+/* Base styles */
+.dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Tagesschrift', 'Noto Sans Japanese';
+  
+}
+
+/* Hero image container */
+.hero-img {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 6px solid #331f11;
+  box-shadow: 0 4px 20px 4px rgba(255, 215, 0, 0.6);
+}
+
+.hero-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.welcome-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98));
+  border: 2px solid #5d4a38;
+  border-radius: 12px;
+  padding: 1.5rem 2.5rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 
+              inset 0 1px 3px rgba(255, 222, 173, 0.2),
+              0 0 25px rgba(255, 215, 0, 0.4); /* Golden glow */
+  color: #f5e6c8;
+  font-family: 'Cinzel', serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.welcome-box::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent);
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.welcome-box:hover {
+  transform: translate(-50%, -50%) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 
+              inset 0 1px 5px rgba(255, 222, 173, 0.3),
+              0 0 40px rgba(255, 215, 0, 0.6); /* Enhanced golden glow on hover */
+}
+
+.welcome-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  color: #f5e6c8;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: #deb887;
+  text-shadow: 0 0 6px rgba(139, 69, 19, 0.6);
+}
+
+
+
+/* Game description */
+.game-description {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-description h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* MonsteR-Rama Game Description Styling */
+
+/* MonsteR-Rama Game Description Styling */
+
+.dashboard-panel.game-description {
+  margin: -5rem auto 2rem auto; /* Negative top margin to create overlap */
+  padding: 2rem;
+  max-width: 1200px;
+  background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98));
+  border: 2px solid #5d4a38;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 
+              inset 0 1px 3px rgba(255, 222, 173, 0.2),
+              0 0 25px rgba(255, 215, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Cinzel', serif;
+  color: #f5e6c8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10; /* Ensure it appears above the hero image */
+}
+
+.dashboard-panel.game-description::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent);
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.dashboard-panel.game-description:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9), 
+              inset 0 1px 5px rgba(255, 222, 173, 0.3),
+              0 0 40px rgba(255, 215, 0, 0.6);
+}
+
+.description-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f5e6c8;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #deb887;
+}
+
+.description-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #deb887;
+  text-align: center;
+  text-shadow: 0 0 6px rgba(139, 69, 19, 0.6);
+  letter-spacing: 1px;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid #5d4a38;
+}
+
+.description:hover {
+  transform: translateX(5px);
+  border-left-color: #deb887;
+}
+
+.description:nth-child(even) {
+  border-left-color: #8B4513;
+}
+
+.description:nth-child(odd) {
+  border-left-color: #5d4a38;
+}
+
+/* Style for the question paragraph */
+.description:nth-last-child(2) {
+  font-style: italic;
+  color: #f5e6c8;
+  text-align: center;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: none;
+  font-size: 1.3rem;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+/* Style for the last paragraph (CTA) */
+.description:last-child {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #f5e6c8;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  padding: 1rem;
+  border-left: none;
+  margin-top: 2rem;
+  letter-spacing: 2px;
+}
+
+
+
+
+/* .dashboard-grid {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  max-width: 1800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  gap: 2rem;
+  overflow-x: hidden; 
+} */
+
+.dashboard-grid.logged-in {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 10px; */
+}
+
+
+
+
+/* .dashboard-panel {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* Monster and Leaderboard panels specific styles */
+/* .monster-card, .leaderboard-card{
+  flex: 1;
+  min-width: 0;
+  max-width: 50%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+} */
+
+.home-leader-card,
+.home-fallen-card {
+  padding: 60px;
+  text-align: center;
+  min-height: 700px;
+}
+.table {
+  min-height: 600px; /* Adjust this value as needed */
+}
+
+
+
+
+/* Specific styling for MonsterOfTheWeek component */
+/* .monster-card .monster-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monster-card h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  width: 100%; 
+  text-align: center;
+} */
+
+/* Tooltip styles */
+.info-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.tooltip-box {
+  position: absolute;
+  z-index: 1000;
+}
+
+.tooltip-content {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Make sure all content within the monster card is centered */
+.monster-card > * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../Public-Assets/peakpx.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+
+/* Styling for the not-logged-in dashboard grid */
+.dashboard-grid.not-logged-in {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1800px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+/* Individual panel styling */
+.dashboard-grid.not-logged-in .dashboard-panel {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+  /* background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98)); */
+  /* border: 2px solid #5d4a38; */
+  /* border-radius: 12px; */
+  /* padding: 1.5rem; */
+  /* box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), 
+              inset 0 1px 3px rgba(255, 222, 173, 0.2),
+              0 0 25px rgba(255, 215, 0, 0.4); */
+  color: #f5e6c8;
+  font-family: 'Cinzel', serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Monster card specific styles */
+/* .dashboard-grid.not-logged-in .monster-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard-grid.not-logged-in .monster-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f5e6c8;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  text-align: center;
+  width: 100%;
+} */
+
+.dashboard-panel.leaderboard-card{
+  padding-top: -6rem;
+  margin-top: -99px;
+}
+
+.dashboard-panel.monster-thingy{
+  margin-top: -2.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.cascade-table-container {
+  width: 100%;
+  background-color: #222222;
+  font-family: 'Uncial Antiqua', 'Tagesschrift', 'Noto Sans Japanese', sans-serif;
+  color: #F7E47C;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  max-height: 0;
+  opacity: 0;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #D62B17;
+}
+
+.cascade-table-container.show {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.cascade-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cascade-table th,
+.cascade-table td {
+  border: 1px solid #D62B17;
+  padding: 10px;
+  text-align: left;
+  background-color: #444;
+  color: #F7E47C;
+}
+
+.fade-in-row {
+  animation: fadeInSlideDown 0.3s ease-in;
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leaderboard-card {
+  background-color: rgba(51, 51, 51, 0.85);
+  color: #F7E47C;
+  border: 2px solid #D62B17;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 300px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  max-height: 500px;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F7E47C;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F7E47C;
+}
+
+.leaderboard-title {
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 3.5em;
+  color: #F7E47C;
+  margin-bottom: 20px;
+}
+
+.leaderboard-controls {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaderboard-controls label {
+  color: #F7E47C;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.dropdown {
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: 1px solid #D62B17;
+  background-color: #111;
+  color: #F7E47C;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #F7E47C;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.leaderboard-item {
+  padding: 5px 0;
+  border-bottom: 1px solid #666;
+  color: #F7E47C;
+  font-size: 1.3em;
+}
+
+.logged-in .leaderboard-card {
+  grid-column: span 2;
+  justify-self: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.leaderboard-table {
+  background-color: #222;
+  color: #F7E47C;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border: 1px solid #D62B17;
+  padding: 12px 20px;
+  text-align: center;
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px 20px;
+  border: 1px solid #D62B17;
+  text-align: center;
+  color: #F7E47C;
+}
+
+.leaderboard-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #444;
+  color: #FFF1B2;
+  border: 2px solid #D62B17;
+  box-shadow: 0 2px 0 #000;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+.leaderboard-table tbody tr:nth-child(odd) {
+  background-color: rgba(60, 40, 30, 0.85);
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: rgba(20, 20, 20, 0.7);
+}
+
+.battle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: transparent;
+}
+
+.centered-table {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.battle-participants {
+  font-size: 1.5em;
+  text-align: center;
+  color: #F7E47C;
+  padding: 15px;
+}
+
+.vs-text {
+  font-weight: bold;
+  color: #D62B17;
+  margin: 0 15px;
+  font-size: 1.2em;
+}
+
+.battle-winner {
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: bold;
+  color: #F7E47C;
+}
+
+/* battleButtonStyles.css */
+.battle-toggle-btn {
+  padding: 1rem 2rem !important;
+  font-size: 1.1rem !important;
+  background: linear-gradient(145deg, #d4af37, #bfa024) !important;
+  color: #1c1208 !important;
+  border: 2px solid #a67c00 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  margin: 2rem auto !important;
+  font-family: 'Cinzel', serif !important;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 3. Alternative approach: Use a more specific selector */
+.battle-toggle-button-container .battle-toggle-btn {
+  /* All the styles without !important */
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(145deg, #d4af37, #bfa024);
+  color: #1c1208;
+  /* etc... */
+}
+
+/* 4. Special case for button inside table header */
+.leaderboard-table th .battle-toggle-btn {
+  /* Override the table header styles specifically for the button */
+  background: linear-gradient(145deg, #d4af37, #bfa024) !important;
+  color: #1c1208 !important;
+  font-family: 'Cinzel', serif !important;
+  /* etc... */
+}
+
+/* 5. Also fix the hover state with higher specificity */
+.battle-toggle-btn:hover {
+  background: linear-gradient(145deg, #e1c055, #cba93a) !important;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.8),
+    inset 0 0 6px rgba(255, 223, 100, 0.3) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+.battle-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recap-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.recap-container.show {
+  max-height: 2000px;
+  transition: max-height 0.8s ease-in;
+}
+
+.recap-row {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation-fill-mode: forwards;
+}
+
+.show .recap-row {
+  animation: cascadeDown 0.5s ease forwards;
+}
+
+.battle-winner-row {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.show .battle-winner-row {
+  animation: cascadeDown 0.5s ease forwards;
+  animation-delay: 0s;
+}
+
+@keyframes cascadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recap-container:not(.show) .recap-row {
+  animation: cascadeUp 0.3s ease forwards;
+}
+
+.recap-container:not(.show) .battle-winner-row {
+  animation: cascadeUp 0.3s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes cascadeUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

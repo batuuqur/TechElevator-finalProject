@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+
+
+
+#view-register,
+#view-login{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 250px;
+}
+
+
+#app-header {
+    grid-area: header;
+    background-color: #333333;
+    padding: 5px;
+    border-bottom: 1px solid #E0B500;
+}
+
+#app-header a {
+    text-decoration: none;
+    color: #E0B500;
+}
+
+#app-header a:hover {
+    color: #D62B17;
+    cursor: pointer;
+}
+
+#app-info {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+#app-footer {
+    grid-area: footer;
+    font-size: 75%;
+    text-align: center;
+    opacity: 0.7;
+    padding: 1rem;
+    color: #E0B500;
+    border-top: 1px solid #E0B500;
+}
+
+#main-nav {
+    grid-area: nav;
+}
+
+/* Main Nav styles */
+.nav-link a {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #E0B500;
+}
+
+.nav-link a:hover {
+    color: #D62B17;
+}
+
+a.active {
+    font-weight: bold;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    padding: 0;
+    margin-right: 0.5rem;
+    color: #E0B500;
+}
+
+.icon-button-inactive {
+    color: grey;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+svg.external-link {
+    font-size: 0.8rem;
+    color: #E0B500;
+    padding-left: 5px;
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+label {
+    text-align: right;
+    display: inline-block;
+    margin-right: 15px;
+    width: 150px;
+    color: #E0B500;
+}
+
+input {
+    display: inline-block;
+    background-color: #444;
+    color: #E0B500;
+    border: 1px solid #E0B500;
+    border-radius: 4px;
+    padding: 0.25rem;
+}
+
+button {
+    border: 1px solid #E0B500;
+    background-color: transparent;
+    color: #E0B500;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-primary {
+    background-color: #D62B17;
+    color: #fff;
+    border: none;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+table {
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border-collapse: collapse;
+    color: #E0B500;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #E0B500;
+}
+
+tr:nth-child(even) {
+    background-color: #444;
+}
+

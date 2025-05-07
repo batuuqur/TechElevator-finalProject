@@ -1,0 +1,21 @@
+.formButton {
+    display: inline-block; /* Or use block if you want vertical stacking */
+    margin: 10px 10px 0 0; /* Top and right spacing */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f9e7b2;
+    background: linear-gradient(145deg, #4b2e1e, #3a2317);
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), inset 0 0 5px #3a2317;
+    transition: all 0.2s ease;
+    text-align: center;
+    text-decoration: none; /* For the Link */
+  }
+  
+  .formButton:hover {
+    background: linear-gradient(145deg, #5a3b28, #3a2317);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 0 8px #6f4f2c;
+    transform: scale(1.05);
+  }

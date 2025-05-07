@@ -1,0 +1,145 @@
+.navbar {
+  background-color: #2e1f13; /* Dark, enchanted wood */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #deb887;
+  backdrop-filter: blur(3px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: #f5deb3; /* Pale enchanted scroll look */
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-logo:hover {
+  color: #f8ae1a; /* Glowing gold */
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #f8ae1a, 0 0 16px #f8ae1a;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #f5deb3; /* Scroll parchment text */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+.nav-link:hover {
+  color: #f8ae1a;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #f8ae1a, 0 0 16px #f8ae1a;
+}
+
+.nav-link.active {
+  color: #f8ae1a;
+  border-bottom: 3px solid #f8ae1a;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.username-badge {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #f8ae1a; /* Glowing gold */
+  text-shadow: 0 0 5px #f8ae1a, 0 0 10px #f8ae1a, 0 0 20px #f8ae1a;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border: 2px solid #f8ae1a;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.username-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      background: rgba(34, 23, 10, 0.9);
+      border-top: 3px solid #deb887;
+  }
+
+  .nav-menu.active {
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+  }
+
+  .nav-item {
+      height: 60px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+
+  .nav-link {
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      display: table;
+  }
+
+  .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+  }
+}

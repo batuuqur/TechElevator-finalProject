@@ -1,0 +1,344 @@
+.leaderboard-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  color: #E0B500; /* Gold text */
+  padding: 0;
+  margin: 0;
+  font-family: 'Tagesschrift', 'Noto Sans Japanese';
+  
+}
+
+.leaderboard-header {
+  padding: 25px 35px;
+  
+  border-bottom: 2px solid #E0B500; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.leaderboard-title {
+  font-size: 4.2rem;
+  color: #E0B500; 
+  margin: 0 0 25px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 18px rgba(224, 181, 0, 0.7); 
+    margin-top: 10px;
+}
+
+.fallen-title {
+  font-size: 4.2rem;
+  color: #E0B500; /* Gold */
+  margin: 0 0 25px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 18px rgba(224, 181, 0, 0.7); /* Enhanced gold glow */
+}
+.fallen-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread out title and image */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 40px; /* Reduced gap for balance */
+}
+
+.fallen-icon {
+  max-width: 100%;
+  height: auto;
+  width: 300px; /* Adjust to fit visually */
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #000);
+}
+
+.free-floating-image {
+  position: absolute; /* or 'fixed' to stick to viewport */
+  top: 84px;
+  left: 1487px;
+  width: 350px; /* optional */
+  height: 99; /* optional */
+  z-index: -1; /* keep it above other elements */
+  opacity: 0.7;
+}
+
+
+/* .leaderboard-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+} */
+
+.leaderboard-controls label {
+  color: #E0B500; /* Gold */
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 8px rgba(224, 181, 0, 0.4); /* Gold glow */
+}
+
+.dropdown {
+  background-color: #252525;
+  color: #E0B500; /* Gold */
+  padding: 10px 15px;
+  margin-right: 15px;
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #444; /* Subtle border */
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+.dropdown:hover {
+  border-color: #E0B500; /* Gold border on hover */
+  box-shadow: 0 0 10px rgba(224, 181, 0, 0.7); /* Enhanced gold glow on hover */
+  background-color: #333333; /* Lighter background on hover */
+}
+
+.table-container {
+  padding: 0 25px 30px;
+  margin-top: 15px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px; /* Space between rows */
+  color: #E0B500; /* Gold text */
+  font-size: 1.2rem; /* Larger font */
+}
+
+.table th {
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  background-color: #1a1a1a;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 10px rgba(255, 255, 255, 0.3); /* White glow */
+}
+
+.table td {
+  padding: 18px 12px;
+  text-align: center;
+  color: #E0B500; /* Gold text */
+  font-size: 1.25rem; /* Larger font */
+  font-weight: 600; /* Semi-bold text */
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Rank column */
+.table th:first-child,
+.table td:first-child {
+  width: 70px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Rounded corners for rows */
+.table tbody tr {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+/* First and last cells in a row get rounded corners */
+.table tbody tr td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.table tbody tr td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Top 3 rows styling with enhanced effects */
+/* Gold (1st place) */
+.table tbody tr:nth-child(1) {
+  background-color: rgba(255, 215, 0, 0.2);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 215, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.table tbody tr:nth-child(1) td {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.table tbody tr:nth-child(1) td:first-child {
+  color: #FFD700; /* Gold for 1st place */
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Silver (2nd place) */
+.table tbody tr:nth-child(2) {
+  background-color: rgba(192, 192, 192, 0.2);
+  box-shadow: 
+    0 3px 7px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(192, 192, 192, 0.4);
+  border: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.table tbody tr:nth-child(2) td {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.table tbody tr:nth-child(2) td:first-child {
+  color: #C0C0C0; /* Silver for 2nd place */
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.8);
+}
+
+/* Bronze (3rd place) */
+.table tbody tr:nth-child(3) {
+  background-color: rgba(205, 127, 50, 0.2);
+  box-shadow: 
+    0 3px 7px rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(205, 127, 50, 0.4);
+  border: 1px solid rgba(205, 127, 50, 0.3);
+}
+
+.table tbody tr:nth-child(3) td {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.table tbody tr:nth-child(3) td:first-child {
+  color: #CD7F32; /* Bronze for 3rd place */
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px rgba(205, 127, 50, 0.8);
+}
+
+/* Alternating row colors for other rows */
+.table tbody tr:nth-child(n+4):nth-child(odd) {
+  background-color: #161616; /* Dark background instead of red */
+}
+
+.table tbody tr:nth-child(n+4):nth-child(even) {
+  background-color: #0c0c0c; /* Darker background instead of red */
+}
+
+.table tbody tr:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  cursor: pointer;
+}
+
+.table tbody tr:hover td {
+  background-color: rgba(214, 43, 23, 0.25); /* Light red background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a glow effect on hover */
+.table tbody tr:hover {
+  filter: drop-shadow(0 0 15px rgba(224, 181, 0, 0.5));
+}
+
+/* Make ALL rows turn red on hover, including medal rows */
+.table tbody tr:hover {
+  background-color: rgba(214, 43, 23, 0.25); /* Light red background */
+  transform: translateY(-2px); /* Slight lift effect */
+  cursor: pointer;
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(224, 181, 0, 0.5);
+}
+
+
+/* Empty state, loading, and error messages */
+.empty-state,
+.loading-message,
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #E0B500; /* Gold */
+  font-size: 1.5rem;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    0 0 15px rgba(224, 181, 0, 0.6);
+}
+
+/* For loading state */
+.leaderboard-card {
+  /* background-color: #16181D; */
+  /* color: #E0B500; */
+  /* border-radius: 12px; */
+  padding: 25px;
+  text-align: center;
+  /* max-width: 80%; */
+  /* margin: 80px 80px; */
+  /* box-shadow: 
+    0 0 20px rgba(214, 43, 23, 0.3), 
+    0 0 30px rgba(224, 181, 0, 0.25); */
+  /* font-size: 1.2rem; */
+}
+
+.leaderboard-card,
+.fallen-heroes-card {
+  padding: 25px;
+  text-align: center;
+}
+.retry-button {
+  background-color: #D62B17; /* Red */
+  color: #E0B500; /* Gold */
+  padding: 12px 24px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 25px auto 0;
+  display: block;
+  text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+.retry-button:hover {
+  background-color: #E0B500; /* Gold */
+  color: #D62B17; /* Red */
+  box-shadow: 0 0 18px rgba(224, 181, 0, 0.7);
+  transform: translateY(-2px); /* Slight lift effect */
+}

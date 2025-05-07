@@ -1,0 +1,104 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 5, 2, 0.85); /* dark immersive overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98));
+  border: 2px solid #5d4a38;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 500px; /* narrower */
+  width: 80%;       /* squish horizontally */
+  max-height: 80vh;
+  overflow-y: auto;
+  color: #f5e6c8;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 0 8px rgba(255, 215, 0, 0.3),
+    0 0 16px rgba(255, 215, 0, 0.2),
+    0 6px 16px rgba(0, 0, 0, 0.8),
+    inset 0 1px 3px rgba(255, 222, 173, 0.2);
+}
+
+.modalContent::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent);
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.modalContent:hover {
+  transform: scale(1.01);
+  box-shadow:
+    0 0 12px rgba(255, 215, 0, 0.5),
+    0 0 24px rgba(255, 215, 0, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.9),
+    inset 0 1px 5px rgba(255, 222, 173, 0.3);
+}
+
+.modalClose {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #deb887;
+  cursor: pointer;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modalClose:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Admin Monster Picker inside Modal */
+.adminMonsterPicker {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.adminMonsterPicker table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  table-layout: fixed;
+}
+
+.adminMonsterPicker th,
+.adminMonsterPicker td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  color: #f5deb3;
+  background-color: rgba(139, 69, 19, 0.1);
+  border-radius: 6px;
+}
+
+.adminMonsterPicker select {
+  width: 100%;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: rgba(139, 69, 19, 0.2);
+  border: 1px solid #8b5a2b;
+  color: #f5e6c8;
+}

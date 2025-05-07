@@ -1,0 +1,108 @@
+  .cardContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  
+    background: linear-gradient(135deg, rgba(34, 23, 10, 0.95), rgba(20, 12, 8, 0.98));
+    border: 2px solid #5d4a38;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8), inset 0 1px 3px rgba(255, 222, 173, 0.2);
+    color: #f5e6c8;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cardContainer[data-tier="1"]:hover {
+    box-shadow: 0 0 20px rgba(39, 174, 96, 0.7),
+                0 0 12px rgba(39, 174, 96, 0.5);
+    border-color: #27AE60;
+  }
+  
+  .cardContainer[data-tier="2"]:hover {
+    box-shadow: 0 0 20px rgba(36, 113, 163, 0.7),
+                0 0 12px rgba(36, 113, 163, 0.5);
+    border-color: #2471A3;
+  }
+  
+  .cardContainer[data-tier="3"]:hover {
+    box-shadow: 0 0 20px rgba(125, 60, 152, 0.7),
+                0 0 12px rgba(125, 60, 152, 0.5);
+    border-color: #7D3C98;
+  }
+  
+  .cardContainer[data-tier="4"]:hover {
+    box-shadow: 0 0 25px rgba(241, 196, 15, 0.8),
+                0 0 18px rgba(241, 196, 15, 0.6);
+    border-color: #F1C40F;
+  }
+  
+
+  .cardContainer:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9),
+                inset 0 1px 5px rgba(255, 222, 173, 0.3),
+                0 0 12px rgba(255, 215, 0, 0.4);
+  }
+  
+  .cardHeader {
+    text-align: center;
+  }
+  
+  .monsterName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .monsterLevel {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #ccc;
+  }
+  
+  .statsBlock {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+    font-family: 'Uncial Antiqua', 'Cinzel', serif;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 3px #ffd700, 0 0 5px rgba(255, 255, 255, 0.3);
+    color: #fff8dc;
+  }
+  
+  .profilePhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  
+  .profilePhoto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #deb887;
+    box-shadow: 0 0 10px rgba(222, 184, 135, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .cardContainer:hover .profilePhoto img {
+    box-shadow: 0 0 15px rgba(222, 184, 135, 0.8);
+    transform: scale(1.05);
+  }
+  
+  

@@ -1,0 +1,183 @@
+.DiceRollContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+    justify-content: center;
+    width: 925px;
+    background-color: #fdf2d0;
+    border: 3px solid #a67c52;
+    border-radius: 20px;
+    column-gap: 20px;
+}
+
+.StatContainer{
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    min-width: 625px;
+    transform: translateX(-65px);
+}
+
+.StatDiv{
+    /*flex-basis: 50%;*/
+    display: flex;
+    justify-content: space-between;
+    /*background: rgba(10,10,10,.2);*/
+    background-color: rgba(255,255,255,.2);
+    border: 3px solid #a67c52;
+    border-radius: 5px;
+    align-items: center;
+    height: 10%;
+    width: 300px;
+    min-width: 300px;
+}
+
+.StatText{
+    flex-basis: 50%;
+    font-size: 140%;
+    color: #3a3320;
+    justify-self: center;
+    text-align: right;
+    padding-left: 10%;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.StatSpan{
+    width: 1px;
+}
+
+.RollBoardContainer{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(26px);
+    font-family: 'Tagesschrift', 'Noto Sans Japanese';
+}
+
+.RollDiceButton {     
+    position: relative;     
+    right: 50%;     
+    top: 44%;     
+    height: 30px;     
+    width: 100px;     
+    z-index: 2;     
+    transform: scale(2);     
+    border-radius: 50px;     
+    font-family: 'Tagesschrift', 'Noto Sans Japanese';
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for smooth transition */
+}
+
+.RollDiceButton:hover {
+    transform: scale(2.1); /* Slightly increased from original scale(2) */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4),
+                0 0 60px rgba(255, 215, 0, 0.4),
+                0 0 90px rgba(255, 215, 0, 0.2);
+}
+
+.RollBoard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 250px;
+    height: 375px;
+    background: linear-gradient(135deg, rgba(36, 23, 15, 0.9), rgba(20, 12, 8, 0.95));
+    border-radius: 18px;
+    border-right: 3px solid #a67c52;
+    border-left: 3px solid #a67c52;;
+}
+
+.DiceButtonContainer{
+    width: 90px;
+    height: 90px;
+}
+
+.DragButton{
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background: transparent;
+    border-color: transparent;
+    z-index: 3;
+}
+
+.StatDropZoneContainer{
+    background: transparent;
+    /*margin-right: 20px;*/
+    justify-content: center;
+    align-content: center;
+    transform: translateX(20px);
+}
+
+.DroppableDiv{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.Dice{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-self: flex-end;
+    z-index: 4;
+}
+
+.D20{
+    height: 100%;
+    width: 100%;
+}
+
+.D20Text{
+    /*font-family: 'Uncial Antiqua', cursive;*/
+    text-align: center;
+    vertical-align: center;
+    font-size: 225%;
+    position: relative;
+    bottom: 75%;
+    left: -1%;
+    color: #E0B500;
+    font-family: 'Tagesschrift', 'Noto Sans Japanese';
+}
+
+.D20Outline{
+    fill: #2c2c2c;
+}
+
+.D20Fill{
+    fill: #000000;
+}
+
+
+.DiceSlot{
+    display: flex;
+    height: 90px;
+    width: 90px;
+    justify-content: center; /*This justifies the SVG into the center*/
+    background: transparent;
+}
+
+.D20SlotSVG{
+    width: 100%;
+    transform:
+            scale(.95);
+}
+
+.D20SlotOutline{
+    fill: #3c3b3b;
+}
+
+.D20SlotSVGFill{
+    fill: #2c2c2c;
+}

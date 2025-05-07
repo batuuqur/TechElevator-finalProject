@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modesto+Cond&display=swap');
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color:rgba(36, 23, 15, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Uncial Antiqua', cursive;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Uncial Antiqua', cursive;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Uncial Antiqua', cursive;
+    
+  }
+  .form label {
+    margin-top: 0.75rem;
+    font-weight: bold;
+    font-family: 'Uncial Antiqua', cursive;
+  }
+  .form input {
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #deb887;
+    border-radius: 4px;
+    font-family: 'Uncial Antiqua', cursive;
+  }
+  .submitButton {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Uncial Antiqua', cursive;
+    
+  }
+  .submitButton:hover {
+    background-color: #45a049;
+  }
+  .btn {
+    padding: 10px 16px;
+    border: 2px solid #deb887;
+    background-color: #deb887;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Uncial Antiqua', cursive;
+    transition: all 0.2s;
+    font-size: 1.2em;
+  }
+  
+  .btn:hover {
+    background-color: #deb887;
+    color: #000;
+    font-family: 'Uncial Antiqua', cursive;
+  }
+  .title,
+.subtitle,
+.dashboard-panel h2,
+.monster-card h2,
+.leaderboard-card h2,
+.heroes-card h2,
+.character-creation h2 {
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 3.5em;
+}

@@ -1,0 +1,204 @@
+/* Shop container - Medieval background and golden accents */
+.shopContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(145deg, #333, #222);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: 20px auto;
+    color: #f5e0b1; /* Light gold */
+    font-family: 'Cinzel', serif; /* Medieval font */
+  }
+
+  /* Header with golden text */
+  .shopHeader {
+    font-size: 3rem;
+    /*margin-bottom: 10px;*/
+    color: #f8ae1a; /* Gold */
+    text-shadow: 0 0 10px #f8ae1a, 0 0 20px #f8ae1a;
+  }
+
+  /* Info about the selected items with a dark transparent background */
+  .selectedInfo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #b0b0b0; /* Grey text */
+    text-shadow: 0 0 5px #f8ae1a, 0 0 10px #f8ae1a;
+  }
+
+.tierSwitcherContainer{
+  justify-self: center;
+  display: flex;
+}
+
+  /* Tier section titles */
+  .tierSection {
+    display: flex;
+    width: 100%;
+  }
+
+.TierTitleContainer{
+  width: 160px;
+  align-content: center;
+  justify-content: center;
+}
+
+  /* Golden text for the tier titles */
+  .tierTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: center;
+    font-weight: bold;
+    color: #f8ae1a; /* Gold */
+    text-shadow: 0 0 5px #f8ae1a, 0 0 15px #f8ae1a;
+  }
+
+  .LeftRightButton{
+    font-size: 225%;
+    text-align: center;
+    vertical-align: center;
+    border-style: none;
+    transform: translateY(-4px);
+  }
+
+.ArmorWeaponSwitchContainer{
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.ArmorWeaponSwitchSpan{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 200%;
+}
+
+.WeaponArmorButton
+{
+  width: 10rem;
+  font-size: 175%;
+  text-align: center;
+  vertical-align: center;
+  border-style: none;
+  transform: translateY(-4px);
+}
+
+  /* Card grid layout with medieval feel */
+  .cardGrid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Cards with medieval stone-like border */
+  .cardGrid > * {
+    width: 200px;
+    border-radius: 8px;
+    background: #444; /* Dark stone color */
+    border: 2px solid #f8ae1a; /* Gold border */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect on cards to highlight */
+  .cardGrid > *:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f8ae1a, 0 0 30px #f8ae1a;
+  }
+
+  /* Layout adjustments for weapons and armor */
+  .weaponAndArmorContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Weapon and armor containers with rustic look */
+  .weaponContainer,
+  .armorContainer {
+    flex: 1;
+    justify-content: center;
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);*/
+  }
+  
+  .weaponContainer {
+    /*margin-right: 20px; !* Space between weapon and armor *!*/
+  }
+
+  /* Body background color to match medieval theme */
+  body {
+    background: #222; /* Dark medieval background */
+    font-family: 'Cinzel', serif; /* Medieval font */
+    color: #f5e0b1; /* Light gold text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Locking higher tiers (above character's level) */
+  .tierSection.locked {
+    opacity: 0.4; /* Dim the locked sections */
+    pointer-events: none; /* Disable interactions */
+  }
+  
+  /* Locked tier items' cards */
+  .tierSection.locked .cardGrid > * {
+    opacity: 0.4;
+    pointer-events: none; /* Disable clicks on locked items */
+    cursor: not-allowed; /* Change the cursor to indicate that items are not selectable */
+  }
+
+.ItemsToPurchase{
+  display: grid;
+  grid-template-areas:
+    "weapon goldCalc"
+    "armor buyButton";
+  grid-template-columns: 4fr 1fr;
+  grid-column-gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  width: 652px;
+}
+
+  .WeaponToPurchase
+  {
+    grid-area: weapon;
+  }
+
+  .ArmorToPurchase
+  {
+    grid-area: armor;
+  }
+
+  .goldCalc{
+    grid-area: goldCalc;
+    justify-items: center;
+    align-content: center;
+  }
+
+/* Purchase button with golden accents */
+.purchaseButton {
+  grid-area: buyButton;
+  background-color: #f8ae1a; /* Gold */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #f8ae1a, 0 0 20px #f8ae1a;
+}
+
+/* Hover effect on the purchase button */
+.purchaseButton:hover {
+  background-color: #d97a1b; /* Darker gold */
+  box-shadow: 0 0 20px #f8ae1a, 0 0 30px #f8ae1a;
+}

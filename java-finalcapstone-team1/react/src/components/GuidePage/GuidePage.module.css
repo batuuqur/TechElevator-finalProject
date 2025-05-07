@@ -1,0 +1,63 @@
+/* GuidePage.module.css */
+
+.guideCard {
+    background: #f3eacb;
+    border: 4px solid #c1a875;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+    color: #3a2c1a;
+    border-radius: 12px;
+    background-image: url('/Public-Assets/parchment-bg.png'); /* Use a parchment texture */
+    background-size: cover;
+  }
+  
+  .leaderboardTitle {
+    font-family: 'Garamond', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #5e3d1b;
+    text-shadow: 1px 1px #dac18a;
+    border-bottom: 2px solid #c1a875;
+    padding-bottom: 0.5rem;
+  }
+  
+  .guideSection {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #c1a875;
+  }
+  
+  .guideSection h2 {
+    font-family: 'Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #4a3210;
+  }
+  
+  .guideSection p,
+  .guideSection ul,
+  .guideSection ol {
+    font-size: 1.1rem;
+  }
+  
+  .guideSection ul,
+  .guideSection ol {
+    padding-left: 1.5rem;
+  }
+  
+  .guideSection li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .guideFooter {
+    margin-top: 2rem;
+    font-style: italic;
+    text-align: center;
+    color: #6d5738;
+  }
+  
